@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <style>
+        body {
+            margin: 0 0 50px 0;
+            background-color: #F0FBEB;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .heading {
+            font-size: 45px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .card {
+            width: 300px;
+            box-shadow: 15px 15px 10px #bbb;
+            margin: 20px;
+            background-color: white;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 2px 2px 10px #bbb;
+            transform: translate(1px, 1px);
+        }
+
+        .img-background {
+            background-color: lightblue;
+        }
+
+        .sub-heading {
+            font-size: 30px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .price {
+            font-size: 28px;
+        }
+
+        .price::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        .lectures {
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .button {
+            height: 50px;
+            width: 170px;
+            margin: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button-text {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 17px 0 17px 0;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .button:active {
+            transform: translate(1px, 1px)
+        }
+
+        .course-details {
+            font-size: 15px;
+            font-family: "Franklin Gothic Medium";
+        }
+    </style>
+</head>
+<body>
+<h1 class="heading">Courses</h1>
+<div class="container">
+
+    <div class="card">
+        <div class="img-background">
+            <img height="200px" width="200px" src="https://codingblocks.com/assets/images/cb/logosc/color_cpp.svg" alt="Launchpad">
+        </div>
+        <h2 class="sub-heading">Launchpad</h2>
+        <p class="price">₹17,000</p>
+        <p class="lectures">(24-26 lectures)</p>
+        <a href="RegistrationForm.html">
+            <div class="button">
+                <div class="button-text">REGISTER NOW</div>
+            </div>
+        </a>
+        <p class="course-details">Programming Fundamentals, OOPS <br>
+            Data Structures & Algorithms in C++ <br>
+            300+ Problems, Hackathons <br>
+            Online Code Submission</p>
+    </div>
+
+    <div class="card">
+        <div class="img-background">
+            <img height="200px" width="200px" src="https://codingblocks.com/assets/images/cb/logosc/color_java.svg" alt="CRUX">
+        </div>
+        <h2 class="sub-heading">Crux</h2>
+        <p class="price">₹17,000</p>
+        <p class="lectures">(24-26 lectures)</p>
+        <a href="RegistrationForm.html">
+            <div class="button">
+                <div class="button-text">REGISTER NOW</div>
+            </div>
+        </a>
+        <p class="course-details">Programming Fundamentals, OOPS <br>
+            Data Structures & Algorithms in Java <br>
+            Online Code Submission <br>
+            300+ Problems, Hackathons</p>
+    </div>
+
+    <div class="card">
+        <div class="img-background">
+            <img width="200px" src="http://pngimg.com/uploads/android_logo/android_logo_PNG26.png" alt="Pandora">
+        </div>
+        <h2 class="sub-heading">Pandora</h2>
+        <p class="price">₹20,000</p>
+        <p class="lectures">(24-26 lectures)</p>
+        <a href="RegistrationForm.html">
+            <div class="button">
+                <div class="button-text">REGISTER NOW</div>
+            </div>
+        </a>
+        <p class="course-details">Building Android Apps <br>
+            UI and Animations <br>
+            Database & Internet Connected Apps <br>
+            LIVE Project & Pitching Session</p>
+    </div>
+
+    <div class="card">
+        <div class="img-background">
+            <img height="200px" width="200px" src="https://codingblocks.com/assets/images/cb/logosc/color_nodejs.svg" alt="Elixir">
+        </div>
+        <h2 class="sub-heading">Elixir</h2>
+        <p class="price">₹20,000</p>
+        <p class="lectures">(22 lectures)</p>
+        <a href="RegistrationForm.html">
+            <div class="button">
+                <div class="button-text">REGISTER NOW</div>
+            </div>
+        </a>
+        <p class="course-details">Web Design <br>
+            Real time Web Apps <br>
+            Deployment & System Adminstration <br>
+            LIVE Project & Hackathon</p>
+    </div>
+
+    <div class="card">
+        <div class="img-background">
+            <img height="200px" width="200px" src="https://codingblocks.com/assets/images/cb/logosc/color_algo.svg" alt="Algo++">
+        </div>
+        <h2 class="sub-heading">Algo++</h2>
+        <p class="price">₹12,000</p>
+        <p class="lectures">(15 lectures)</p>
+        <a href="RegistrationForm.html">
+            <div class="button">
+                <div class="button-text">REGISTER NOW</div>
+            </div>
+        </a>
+        <p class="course-details">Adv Data Structures & Algo in C++ <br>
+            Complex Problem Solving <br>
+            Algorithmic Analysis <br>
+            Interview Preparation</p>
+    </div>
+
+    <div class="card">
+        <div class="img-background">
+            <img height="200px" width="200px" src="https://codingblocks.com/assets/images/cb/logosc/color_ml.svg" alt="Perceptron">
+        </div>
+        <h2 class="sub-heading">Perceptron</h2>
+        <p class="price">₹22,000</p>
+        <p class="lectures">(23 lectures)</p>
+        <a href="RegistrationForm.html">
+            <div class="button">
+                <div class="button-text">REGISTER NOW</div>
+            </div>
+        </a>
+        <p class="course-details">Code Machine Learning Algorithms <br>
+            Artificial Intelligence <br>
+            Natural Language Processing <br>
+            3 Live Projects & Hackathon</p>
+    </div>
+
+</div>
+</body>
+</html>

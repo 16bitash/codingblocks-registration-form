@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pay Me The God Damn Money</title>
+    <style>
+        /*input*/
+
+        .animated-input {
+            outline: none;
+            height: 30px;
+            width: 200px;
+            font-size: 30px;
+        }
+
+        .group {
+            display: inline-block;
+            position: relative;
+        }
+
+        .bars::before, .bars::after {
+            content: "";
+            background-color: dodgerblue;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            transition: 0.3s ease;
+        }
+
+        .bars::before {
+            left: 50%;
+        }
+
+        .bars::after {
+            right: 50%;
+        }
+
+        .highlighter::before, .highlighter::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .highlighter::before {
+            left: 50%;
+        }
+
+        .highlighter::after {
+            right: 50%;
+        }
+
+        input:focus ~ .bars::before, input:focus ~ .bars::after {
+            width: 50%;
+        }
+
+        input:focus ~ .highlighter::before, input:focus ~ .highlighter::after {
+            animation-name: highlight;
+            animation-duration: 0.3s;
+            animation-timing-function: ease;
+        }
+
+        @keyframes highlight {
+            from {
+                width: 0;
+                background: dodgerblue;
+            }
+            to {
+                width: 50%;
+                background: transparent;
+            }
+        }
+        /*input*/
+
+        body {
+            background-color: #F0FBEB;
+            text-align: center;
+        }
+
+        .heading {
+            text-transform: capitalize;
+            font-size: 35px;
+        }
+
+        .card {
+            height: 250px;
+            width: 450px;
+            text-align: left;
+            box-shadow: 15px 15px 10px #bbb;
+            margin: 50px auto 0 auto;
+            background-color: #deeff5;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 2px 2px 10px #bbb;
+            transform: translate(1px, 1px);
+        }
+
+        .container {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .card-content {
+            display: inline-block;
+            text-transform: capitalize;
+            font-size: 30px;
+            padding: 15px;
+        }
+
+        .cvv-container {
+            position: absolute;
+            right: 15px;
+        }
+
+        .cvv-input {
+                width: 50px;
+        }
+
+        .date-input {
+            width: 60px;
+        }
+
+        .button {
+            height: 50px;
+            width: 170px;
+            background-color: dodgerblue;
+            margin: auto;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            border: solid;
+            border-color: #F0FBEB;
+            border-width: 2px;
+            transition: 0.3s;
+            position: relative;
+            top: 40px;
+        }
+
+        .button-text {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 17px 0 17px 0;
+        }
+
+        .button:hover {
+            background-color: #F0FBEB;
+            color: black;
+            border: solid;
+            border-color: dodgerblue;
+            border-width: 2px;
+        }
+
+    </style>
+</head>
+<body>
+<h1 class="heading">Secure credit card payment</h1>
+<div class="card">
+    <div class="container">
+    <span class="card-content">
+        Card number
+    </span>
+    <span class="group">
+        <input class="animated-input" type="number">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+    </span>
+
+    <span class="card-content">
+        Expiration date
+        <br>
+         <span class="group">
+    <input class="animated-input date-input" type="number" placeholder="MM">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+        </span>
+    <span class="card-content">/</span>
+        <span class="group">
+    <input class="animated-input date-input" type="number" placeholder="YY">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+        </span>
+    </span>
+    <span class="cvv-container">
+    <span class="card-content">
+        CVV
+    </span>
+    <span class="group">
+        <input class="animated-input cvv-input" type="number">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+    </span>
+        </span>
+    </div>
+</div>
+<div class="button">
+    <div class="button-text">PAY</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+            background-color: #F0FBEB;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .heading {
+            text-transform: capitalize;
+            font-size: 40px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1300px;
+            margin: auto;
+            justify-content: center;
+        }
+
+        .wrapper {
+            max-width: 600px;
+            margin: 30px;
+        }
+
+        td {
+            padding: 15px;
+        }
+
+        table {
+            border-spacing: 0 30px;
+        }
+
+        tr {
+            background-color: #deeff5;
+            box-shadow: #bbbbbb 10px 10px 10px;
+            transition: 0.3s;
+        }
+
+        tr:hover {
+            box-shadow: 2px 2px 10px #bbb;
+            transform: translate(1px, 1px);
+        }
+
+        .guiding-text {
+            font-size: 30px;
+            text-transform: capitalize;
+        }
+
+        .date-input {
+            height: 30px;
+            width: 200px;
+        }
+
+        .select-input {
+            height: 30px;
+            width: 200px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .button {
+            height: 50px;
+            width: 170px;
+            background-color: dodgerblue;
+            margin: auto;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            border: solid;
+            border-color: #F0FBEB;
+            border-width: 2px;
+            transition: 0.3s;
+        }
+
+        .button-text {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 17px 0 17px 0;
+        }
+
+        .button:hover {
+            background-color: #F0FBEB;
+            color: black;
+            border: solid;
+            border-color: dodgerblue;
+            border-width: 2px;
+        }
+
+        .animated-input {
+            outline: none;
+            height: 30px;
+            width: 200px;
+            font-size: 30px;
+        }
+
+        .group {
+            display: inline-block;
+            position: relative;
+        }
+
+        .bars::before, .bars::after {
+            content: "";
+            background-color: dodgerblue;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            transition: 0.3s ease;
+        }
+
+        .bars::before {
+            left: 50%;
+        }
+
+        .bars::after {
+            right: 50%;
+        }
+
+        .highlighter::before, .highlighter::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .highlighter::before {
+            left: 50%;
+        }
+
+        .highlighter::after {
+            right: 50%;
+        }
+
+        input:focus ~ .bars::before, input:focus ~ .bars::after {
+            width: 50%;
+        }
+
+        input:focus ~ .highlighter::before, input:focus ~ .highlighter::after {
+            animation-name: highlight;
+            animation-duration: 0.3s;
+            animation-timing-function: ease;
+        }
+
+        @keyframes highlight {
+            from {
+                width: 0;
+                background: dodgerblue;
+            }
+            to {
+                width: 50%;
+                background: transparent;
+            }
+        }
+
+        @media only screen and (max-width: 1180px) {
+            .wrapper {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            td {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<h1 class="heading">Please enter your credentials</h1>
+<div class="container">
+    <div class="wrapper">
+        <table>
+            <tr>
+                <td class="guiding-text">First name</td>
+                <td>
+                    <span class="group">
+    <input class="animated-input" type="text">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Last name</td>
+                <td>
+            <span class="group">
+    <input class="animated-input" type="text">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Email</td>
+                <td>
+            <span class="group">
+    <input class="animated-input" type="email">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Password</td>
+                <td>
+            <span class="group">
+    <input class="animated-input" type="password">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Phone number</td>
+                <td>
+            <span class="group">
+    <input class="animated-input" type="tel">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Whatsapp number</td>
+                <td>
+            <span class="group">
+    <input class="animated-input" type="tel">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="wrapper">
+        <table>
+            <tr>
+                <td class="guiding-text">DOB</td>
+                <td>
+                    <input class="date-input" type="date">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">School/College Name</td>
+                <td>
+            <span class="group">
+    <input class="animated-input" type="text">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Branch</td>
+                <td>
+            <span class="group">
+    <input class="animated-input" type="text">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Year of Passing</td>
+                <td>
+                    <select class="select-input" name="Passing Year">
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Upload your cv</td>
+                <td>
+                    <input type="file" id="uploadFile">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="guiding-text">Choose center</td>
+                <td>
+                    <input type="radio" name="center">Pitampura
+                    <input type="radio" name="center">Dwarka
+                    <input type="radio" name="center">Gurugram
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<a href="Payment.html">
+    <div class="button">
+        <div class="button-text">NEXT</div>
+    </div>
+</a>
+</body>
+</html>

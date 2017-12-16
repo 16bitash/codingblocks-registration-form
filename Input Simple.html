@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Input</title>
+    <style>
+        .animated-input {
+            outline: none;
+            height: 30px;
+            width: 200px;
+            font-size: 30px;
+        }
+
+        .group {
+            display: inline-block;
+            position: relative;
+        }
+
+        .bars::before, .bars::after {
+            content: "";
+            background-color: dodgerblue;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            transition: 0.3s ease;
+        }
+
+        .bars::before {
+            left: 50%;
+        }
+
+        .bars::after {
+            right: 50%;
+        }
+
+        .highlighter::before, .highlighter::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .highlighter::before {
+            left: 50%;
+        }
+
+        .highlighter::after {
+            right: 50%;
+        }
+
+        input:focus ~ .bars::before, input:focus ~ .bars::after {
+            width: 50%;
+        }
+
+        input:focus ~ .highlighter::before, input:focus ~ .highlighter::after {
+            animation-name: highlight;
+            animation-duration: 0.3s;
+            animation-timing-function: ease;
+        }
+
+        @keyframes highlight {
+            from {
+                width: 0;
+                background: dodgerblue;
+            }
+            to {
+                width: 50%;
+                background: transparent;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<span class="group">
+    <input class="animated-input" type="text">
+    <span class="bars"></span>
+    <span class="highlighter"></span>
+</span>
+</body>
+</html>
